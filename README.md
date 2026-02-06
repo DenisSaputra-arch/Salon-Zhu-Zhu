@@ -45,7 +45,7 @@ Kabupaten Kuningan, Jawa Barat 45581
 
 **Jam Operasional:**
 ```
-Setiap Hari: 09:00 - 21:00 WIB
+Setiap Hari: 08:00 - 17:00 WIB
 (Termasuk Hari Libur Nasional)
 ```
 
