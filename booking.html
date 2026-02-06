@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Zhu zhu Salon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-crown"></i>
+                <span>Zhu zhu Salon</span>
+            </div>
+
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Layanan</a></li>
+                <li><a href="booking.html" class="nav-link active">Booking</a></li>
+                <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                <li><a href="about.html" class="nav-link">Tentang</a></li>
+                <li><a href="contact.html" class="nav-link">Kontak</a></li>
+                <li><a href="admin-login.html" class="nav-link btn-login">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="section-header">
+                <h1><i class="fas fa-calendar-check"></i> Booking Layanan</h1>
+                <p>Isi form di bawah ini untuk reservasi layanan Anda</p>
+            </div>
+
+            <div class="booking-container">
+                <!-- Booking Form -->
+                <div class="booking-form-wrapper">
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fas fa-user"></i> Nama Lengkap *
+                            </label>
+                            <input type="text" id="name" name="name" required placeholder="Masukkan nama lengkap Anda">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class="fas fa-phone"></i> Nomor HP/WhatsApp *
+                            </label>
+                            <input type="tel" id="phone" name="phone" required placeholder="08123456789">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">
+                                <i class="fas fa-spa"></i> Pilih Layanan *
+                            </label>
+                            <select id="service" name="service" required>
+                                <option value="">-- Pilih Layanan --</option>
+                                <option value="Potong Rambut - Rp 75.000">Potong Rambut - Rp 75.000</option>
+                                <option value="Hair Coloring - Rp 200.000">Hair Coloring - Rp 200.000</option>
+                                <option value="Smoothing & Rebonding - Rp 350.000">Smoothing & Rebonding - Rp 350.000</option>
+                                <option value="Creambath - Rp 80.000">Creambath - Rp 80.000</option>
+                                <option value="Hair Spa - Rp 150.000">Hair Spa - Rp 150.000</option>
+                                <option value="Manicure & Pedicure - Rp 60.000">Manicure & Pedicure - Rp 60.000</option>
+                                <option value="Facial Treatment - Rp 120.000">Facial Treatment - Rp 120.000</option>
+                                <option value="Bridal Makeup - Rp 500.000">Bridal Makeup - Rp 500.000</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">
+                                    <i class="fas fa-calendar"></i> Tanggal *
+                                </label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="time">
+                                    <i class="fas fa-clock"></i> Waktu *
+                                </label>
+                                <select id="time" name="time" required>
+                                    <option value="">-- Pilih Waktu --</option>
+                                    <option value="09:00">09:00 WIB</option>
+                                    <option value="10:30">10:30 WIB</option>
+                                    <option value="12:00">12:00 WIB</option>
+                                    <option value="13:30">13:30 WIB</option>
+                                    <option value="15:00">15:00 WIB</option>
+                                    <option value="16:30">16:30 WIB</option>
+                                    <option value="18:00">18:00 WIB</option>
+                                    <option value="19:30">19:30 WIB</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">
+                                <i class="fas fa-sticky-note"></i> Catatan (Opsional)
+                            </label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="Tambahkan catatan jika ada permintaan khusus"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">
+                            <i class="fab fa-whatsapp"></i> Kirim via WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Payment Methods Info -->
+                <div class="payment-methods">
+                    <h3><i class="fas fa-credit-card"></i> Metode Pembayaran</h3>
+                    <p class="payment-subtitle">Kami menerima berbagai metode pembayaran</p>
+
+                    <div class="payment-grid">
+                        <div class="payment-card">
+                            <div class="payment-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <h4>Cash</h4>
+                            <p>Bayar tunai di salon</p>
+                        </div>
+
+                        <div class="payment-card">
+                            <div class="payment-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h4>Transfer Bank</h4>
+                            <p>BCA, Mandiri, BNI, BRI</p>
+                        </div>
+
+                        <div class="payment-card">
+                            <div class="payment-icon">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                            <h4>QRIS</h4>
+                            <p>Scan & bayar dengan mudah</p>
+                        </div>
+
+                        <div class="payment-card">
+                            <div class="payment-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>E-Wallet</h4>
+                            <p>GoPay, OVO, Dana, ShopeePay</p>
+                        </div>
+                    </div>
+
+                    <div class="payment-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Untuk konfirmasi pembayaran dan detail rekening, silakan hubungi kami via WhatsApp setelah booking.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Info -->
+            <div class="booking-info">
+                <div class="info-box">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>Konfirmasi Otomatis</h4>
+                        <p>Booking Anda akan langsung dikirim via WhatsApp untuk konfirmasi cepat</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <i class="fas fa-calendar-check"></i>
+                    <div>
+                        <h4>Pilih Waktu Fleksibel</h4>
+                        <p>Tersedia slot waktu dari pukul 09:00 - 21:00 WIB setiap hari</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Customer Service 24/7</h4>
+                        <p>Hubungi kami kapan saja untuk bantuan dan informasi lebih lanjut</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Zhu Zhu Salon</h3>
+                    <p>Salon kecantikan premium dengan layanan lengkap untuk pria dan wanita.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/6283190274407" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Navigasi</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Layanan</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                        <li><a href="about.html">Tentang</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Kontak</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Luragunglandeuh, Kec. Luragung<br>Kabupaten Kuningan, Jawa Barat 45581</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0831-9027-4407</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Jam Operasional</h3>
+                    <div class="opening-hours">
+                        <p><strong>Setiap Hari</strong></p>
+                        <p>09:00 - 21:00 WIB</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zhu Zhu Salon. All rights reserved.</p>
+            </div>
+            <!-- JavaScript untuk WhatsApp Booking -->
+            <script>
+                // Set minimum date to today
+                document.addEventListener('DOMContentLoaded', function() {
+                    const dateInput = document.getElementById('date');
+                    const today = new Date().toISOString().split('T')[0];
+                    dateInput.min = today;
+                });
+
+                // Handle booking form submission
+                document.getElementById('bookingForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    // Get form values
+                    const name = document.getElementById('name').value;
+                    const phone = document.getElementById('phone').value;
+                    const service = document.getElementById('service').value;
+                    const date = document.getElementById('date').value;
+                    const time = document.getElementById('time').value;
+                    const notes = document.getElementById('notes').value;
+
+                    // Format date to Indonesian
+                    const dateObj = new Date(date);
+                    const options = {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    };
+                    const formattedDate = dateObj.toLocaleDateString('id-ID', options);
+
+                    // Create WhatsApp message
+                    let message = `Halo, saya ingin booking layanan:\n\n`;
+                    message += `Nama: ${name}\n`;
+                    message += `No. HP: ${phone}\n`;
+                    message += `Layanan: ${service}\n`;
+                    message += `Tanggal: ${formattedDate}\n`;
+                    message += `Jam: ${time} WIB\n`;
+                    if (notes) {
+                        message += `Catatan: ${notes}\n`;
+                    }
+                    message += `\nTerima kasih.`;
+
+                    // Encode message for URL
+                    const encodedMessage = encodeURIComponent(message);
+
+                    // WhatsApp URL
+                    const waNumber = '6283190274407';
+                    const waURL = `https://api.whatsapp.com/send?phone=${waNumber}&text=${encodedMessage}`;
+
+                    // Open WhatsApp
+                    window.open(waURL, '_blank');
+                });
+            </script>
+            <script src="assets/js/main.js"></script>
+</body>
+
+</html>
